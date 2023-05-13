@@ -1,42 +1,127 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.collaborate {
+  text-align: left;
+  padding: 3% 18%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.collaborate h4 {
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  font-weight: bolder;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.container .details {
+  width: 50%;
+}
+.container .img {
+  width: 50%;
+}
+img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.details > h2 {
+  font-style: normal;
+  font-weight: lighter;
+  font-size: 400%;
+  font-family: serif;
+}
+.details {
+  padding-right: 15%;
+}
+.details > p {
+  font-size: 1.7rem;
+  font-family: serif;
+  color: #212529;
+
+  padding: 9% 0 20%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.link {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.details > .link > p,
+svg {
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.details > .link > p {
+  font-family: serif;
+}
+
+@media screen and (max-width: 1500px) {
+  .collaborate {
+    padding: 5% 3%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container .details {
+    width: 50%;
+  }
+  .container .img {
+    width: 50%;
+  }
+
+  .details h2 {
+    font-size: 300%;
+  }
+  .link p {
+    font-size: 1.3rem;
+  }
+  .details > p {
+    font-size: 1.2rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* mobile device */
+@media screen and (max-width: 800px) {
+  .collaborate {
+    padding: 2% 3%;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .container {
+    flex-direction: column-reverse;
+  }
+  .container .details {
+    width: 100%;
+  }
+  .container .img {
+    width: 100%;
+  }
+  .details > h2 {
+    font-size: 250%;
+  }
+  .link p {
+    font-size: 1.3rem;
+  }
+  img {
+    margin-top: 60px;
+    height: auto;
+  }
+  .details {
+    padding-right: 0;
+  }
+  .details > .link > p {
+    color: #007bff;
+  }
 }
