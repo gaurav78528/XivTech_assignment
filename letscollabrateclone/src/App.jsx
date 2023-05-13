@@ -1,6 +1,8 @@
 import React from "react";
 import "./App.css";
 import CollaborateComp from "./components/CollaborateComp";
+import Button from "./components/Button";
+import { BsArrowRight } from "react-icons/bs";
 
 const data = [
   {
@@ -34,11 +36,18 @@ const data = [
 ];
 const App = () => {
   return (
-    <div className="collaborate">
+    <div className="container">
       <h4>Let's Collaborate</h4>
       {data.map((item) => (
-        <CollaborateComp key={item.id} item={item} />
+        <>
+          <CollaborateComp key={item.id} item={item} />
+          <div className="link hide-small-medium">
+            <p>{item.link}</p>
+            <BsArrowRight />
+          </div>
+        </>
       ))}
+      <Button />
     </div>
   );
 };

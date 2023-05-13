@@ -1,15 +1,13 @@
 import React from "react";
 import Deatils from "./Deatils";
 import ImageComp from "./ImageComp";
+import Button from "./Button";
 
 const CollaborateComp = ({ item }) => {
   return (
-    <div className="container">
+    <div className="collaborate">
       <Deatils item={item} />
-
-      <div className="img">
-        <ImageComp item={item} />
-      </div>
+      <ImageComp item={item} />
     </div>
   );
 };

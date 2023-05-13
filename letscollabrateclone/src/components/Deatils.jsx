@@ -5,7 +5,7 @@ const Deatils = ({ item }) => {
     <div className="details">
       <h2>{item.title}</h2>
       <p>{item.desc}</p>
-      <div className="link">
+      <div className="link hide-large">
         <p>{item.link}</p>
         <BsArrowRight />
       </div>
